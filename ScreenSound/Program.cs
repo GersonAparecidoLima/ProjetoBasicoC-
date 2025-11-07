@@ -6,14 +6,20 @@ using ScreenSound.Modelos;
 
 try
 {
-    //var connection = new Connection();
-    //var listaArtistas = connection.Listar();
+
 
     var artistaDAL = new ArtistaDAL();
     artistaDAL.Adicionar(new Artista("Voz da Verdade", "Voz da Verdade é uma banda brasileira de música cristã contemporânea."));
 
+    var artistaPitty = new Artista("Voz da Verdade", "Voz da Verdade é uma banda brasileira de música cristã contemporânea. 1978") { Id = 3002 };
+
+    //artistaDAL.Atualizar(artistaPitty);
+    //artistaDAL.Deletar(artistaPitty);
+
     var listaArtistas = artistaDAL.Listar();
+
     
+
 
     foreach (var artista in listaArtistas)
     {
